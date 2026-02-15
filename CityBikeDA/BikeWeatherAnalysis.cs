@@ -1,6 +1,6 @@
 namespace CityBikeDA;
 
-public class BikeWeatherAnalysis
+public static class BikeWeatherAnalysis
 {
     public static void AnalyzeRideDurationByWeather(List<BikeTrip> trips, List<WeatherData> weather)
     {
@@ -39,5 +39,4 @@ public class BikeWeatherAnalysis
         foreach (var range in tempRanges)
             Console.WriteLine($"{range.TempRange,-10} {range.TripCount,6} trips, {range.AvgDuration:F0}min avg");
     }
-    
 }
