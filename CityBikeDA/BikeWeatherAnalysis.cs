@@ -2,7 +2,7 @@ namespace CityBikeDA;
 
 public static class BikeWeatherAnalysis
 {
-    public static void AnalyzeRideDurationByWeather(List<BikeTrip> trips, List<WeatherData> weather)
+    public static void RideDurationByWeather(List<BikeTrip> trips, List<WeatherData> weather)
     {
         var combined = trips
             .Join(weather,
@@ -24,7 +24,7 @@ public static class BikeWeatherAnalysis
         foreach (var day in combined)
             Console.WriteLine($"{day.Date:MM/dd} {day.AvgTemp:F0}C Rain:{day.AvgRain:F1}mm - {day.AvgDuration:F0}min, {day.TripCount} trips");
     }
-    public static void AnalyzeRidesByTemperature(List<BikeTrip> trips, List<WeatherData> weather)
+    public static void RidesByTemperature(List<BikeTrip> trips, List<WeatherData> weather)
     {
         var tempRanges = trips
             .Join(weather,
